@@ -20,9 +20,7 @@
 const path = require('path');
 const cp = require('child_process');
 const {before, describe, it} = require('mocha');
-// eslint-disable-next-line node/no-missing-require
 const {AccessApprovalClient} = require('@google-cloud/access-approval');
-// eslint-disable-next-line no-unused-vars, node/no-missing-require
 const {assert} = require('chai');
 
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
@@ -43,7 +41,6 @@ describe('Quickstart', () => {
 
   it('should run quickstart', async () => {
     //TODO: remove this disability
-    // eslint-disable-next-line no-unused-vars
     const stdout = execSync('node ./quickstart.js', {cwd});
     //assert(stdout, stdout !== null);
   });
