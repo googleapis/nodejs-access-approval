@@ -8,10 +8,12 @@
               "nested": {
                 "v1": {
                   "options": {
+                    "csharp_namespace": "Google.Cloud.AccessApproval.V1",
                     "go_package": "google.golang.org/genproto/googleapis/cloud/accessapproval/v1;accessapproval",
                     "java_multiple_files": true,
                     "java_outer_classname": "AccessApprovalProto",
                     "java_package": "com.google.cloud.accessapproval.v1",
+                    "php_namespace": "Google\\Cloud\\AccessApproval\\V1",
                     "ruby_package": "Google::Cloud::AccessApproval::V1"
                   },
                   "nested": {
