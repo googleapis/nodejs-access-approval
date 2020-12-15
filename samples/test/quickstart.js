@@ -27,7 +27,7 @@ const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const cwd = path.join(__dirname, '..');
 
-const client = new {AccessApprovalClient}();
+const client = new AccessApprovalClient();
 
 describe('Quickstart', () => {
   //TODO: remove this if not using the projectId
@@ -41,7 +41,7 @@ describe('Quickstart', () => {
 
   it('should run quickstart', async () => {
     //TODO: remove this disability
-    const stdout = execSync('node ./quickstart.js', {cwd});
-    //assert(stdout, stdout !== null);
+    const stdout = execSync(`node ./quickstart.js ${projectId}`, {cwd});
+    assert.match(stdout, /\[\]/);
   });
 });

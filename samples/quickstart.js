@@ -13,7 +13,7 @@
 
 'use strict';
 
-async function main() {
+async function main(projectId) {
   // [START nodejs_access_approval_quickstart]
   // Imports the Google Cloud client library
 
@@ -28,7 +28,9 @@ async function main() {
 
   //TODO(library generator): write the actual function you will be testing
   async function listRequests() {
-    const requests = await client.listApprovalRequests();
+    const requests = await client.listApprovalRequests({
+      parent: `projects/${projectId}`,
+    });
     console.info(requests);
   }
   listRequests();
