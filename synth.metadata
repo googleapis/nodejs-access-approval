@@ -3,8 +3,8 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/nodejs-access-approval.git",
-        "sha": "b7ac9dd75f99d6dd39335e3e1df9c62636a81e3a"
+        "remote": "https://github.com/googleapis/nodejs-access-approval.git",
+        "sha": "5940e5f3b2ccdff6e63eba1d22da5632aaa52d40"
       }
     },
     {
