@@ -43,7 +43,7 @@ module.exports = {
     copyright: 'Copyright 2021 Google LLC',
     includeDate: false,
     sourceFiles: false,
-    systemName: 'accessapproval',
+    systemName: '@google-cloud/access-approval',
     theme: 'lumen',
     default: {
       outputSourceFiles: false
