@@ -22,4 +22,4 @@ type AccessApprovalClient = v1.AccessApprovalClient;
 export {v1, AccessApprovalClient};
 export default {v1, AccessApprovalClient};
 import * as protos from '../protos/protos';
-export {protos}
+export {protos};
