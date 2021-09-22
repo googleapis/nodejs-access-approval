@@ -12,18 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
-  // [START accessapproval_dismiss_approval_request_sample]
+  // [START accessapproval_update_access_approval_settings_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Name of the ApprovalRequest to dismiss.
+   *  The new AccessApprovalSettings.
    */
-  // const name = 'abc123'
+  // const settings = ''
+  /**
+   *  The update mask applies to the settings. Only the top level fields of
+   *  AccessApprovalSettings (notification_emails & enrolled_services) are
+   *  supported. For each field, if it is included, the currently stored value
+   *  will be entirely overwritten with the value of the field passed in this
+   *  request.
+   *  For the `FieldMask` definition, see
+   *  https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+   *  If this field is left unset, only the notification_emails field will be
+   *  updated.
+   */
+  // const updateMask = ''
 
   // Imports the Accessapproval library
   const {AccessApprovalClient} = require('@google-cloud/access-approval').v1;
@@ -31,18 +42,19 @@ function main() {
   // Instantiates a client
   const accessapprovalClient = new AccessApprovalClient();
 
-  async function dismissApprovalRequest() {
+  async function updateAccessApprovalSettings() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
-    const response = await accessapprovalClient.dismissApprovalRequest(request);
+    const response = await accessapprovalClient.updateAccessApprovalSettings(
+      request
+    );
     console.log(response);
   }
 
-  dismissApprovalRequest();
-  // [END accessapproval_dismiss_approval_request_sample]
+  updateAccessApprovalSettings();
+  // [END accessapproval_update_access_approval_settings_sample]
 }
 
 process.on('unhandledRejection', err => {

@@ -12,16 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
-  // [START accessapproval_delete_access_approval_settings_sample]
+  // [START accessapproval_dismiss_approval_request_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Name of the AccessApprovalSettings to delete.
+   *  Name of the ApprovalRequest to dismiss.
    */
   // const name = 'abc123'
 
@@ -31,18 +30,17 @@ function main() {
   // Instantiates a client
   const accessapprovalClient = new AccessApprovalClient();
 
-  async function deleteAccessApprovalSettings() {
+  async function dismissApprovalRequest() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
-    const response = await accessapprovalClient.deleteAccessApprovalSettings(request);
+    const response = await accessapprovalClient.dismissApprovalRequest(request);
     console.log(response);
   }
 
-  deleteAccessApprovalSettings();
-  // [END accessapproval_delete_access_approval_settings_sample]
+  dismissApprovalRequest();
+  // [END accessapproval_dismiss_approval_request_sample]
 }
 
 process.on('unhandledRejection', err => {

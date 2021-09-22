@@ -12,22 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
-  // [START accessapproval_approve_approval_request_sample]
+  // [START accessapproval_list_approval_requests_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Name of the approval request to approve.
+   *  The parent resource. This may be "projects/{project_id}",
+   *  "folders/{folder_id}", or "organizations/{organization_id}".
    */
-  // const name = 'abc123'
+  // const parent = 'abc123'
   /**
-   *  The expiration time of this approval.
+   *  A filter on the type of approval requests to retrieve. Must be one of the
+   *  following values:
+   *  - [not set]: Requests that are pending or have active approvals.
+   *  - ALL: All requests.
+   *  - PENDING: Only pending requests.
+   *  - ACTIVE: Only active (i.e. currently approved) requests.
+   *  - DISMISSED: Only dismissed (including expired) requests.
    */
-  // const expireTime = ''
+  // const filter = 'abc123'
+  /**
+   *  Requested page size.
+   */
+  // const pageSize = 1234
+  /**
+   *  A token identifying the page of results to return.
+   */
+  // const pageToken = 'abc123'
 
   // Imports the Accessapproval library
   const {AccessApprovalClient} = require('@google-cloud/access-approval').v1;
@@ -35,18 +49,21 @@ function main() {
   // Instantiates a client
   const accessapprovalClient = new AccessApprovalClient();
 
-  async function approveApprovalRequest() {
+  async function listApprovalRequests() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
-    const response = await accessapprovalClient.approveApprovalRequest(request);
-    console.log(response);
+    const iterable = await accessapprovalClient.listApprovalRequestsAsync(
+      request
+    );
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  approveApprovalRequest();
-  // [END accessapproval_approve_approval_request_sample]
+  listApprovalRequests();
+  // [END accessapproval_list_approval_requests_sample]
 }
 
 process.on('unhandledRejection', err => {
