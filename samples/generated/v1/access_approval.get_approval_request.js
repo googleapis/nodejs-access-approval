@@ -12,30 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
-  // [START accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_async]
+  // [START accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  The new AccessApprovalSettings.
+   *  Name of the approval request to retrieve.
    */
-  // const settings = ''
-  /**
-   *  The update mask applies to the settings. Only the top level fields of
-   *  AccessApprovalSettings (notification_emails & enrolled_services) are
-   *  supported. For each field, if it is included, the currently stored value
-   *  will be entirely overwritten with the value of the field passed in this
-   *  request.
-   *  For the `FieldMask` definition, see
-   *  https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
-   *  If this field is left unset, only the notification_emails field will be
-   *  updated.
-   */
-  // const updateMask = ''
+  // const name = 'abc123'
 
   // Imports the Accessapproval library
   const {AccessApprovalClient} = require('@google-cloud/access-approval').v1;
@@ -43,18 +30,17 @@ function main() {
   // Instantiates a client
   const accessapprovalClient = new AccessApprovalClient();
 
-  async function updateAccessApprovalSettings() {
+  async function getApprovalRequest() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
-    const response = await accessapprovalClient.updateAccessApprovalSettings(request);
+    const response = await accessapprovalClient.getApprovalRequest(request);
     console.log(response);
   }
 
-  updateAccessApprovalSettings();
-  // [END accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_async]
+  getApprovalRequest();
+  // [END accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async]
 }
 
 process.on('unhandledRejection', err => {

@@ -1132,7 +1132,8 @@ export class AccessApprovalClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listApprovalRequests'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listApprovalRequests.createStream(
       this.innerApiCalls.listApprovalRequests as gax.GaxCall,
@@ -1193,7 +1194,8 @@ export class AccessApprovalClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listApprovalRequests'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listApprovalRequests.asyncIterate(
       this.innerApiCalls['listApprovalRequests'] as GaxCall,
