@@ -12,16 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
-  // [START accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async]
+  // [START accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Name of the AccessApprovalSettings to retrieve.
+   *  Name of the approval request to retrieve.
    */
   // const name = 'abc123'
 
@@ -31,18 +30,17 @@ function main() {
   // Instantiates a client
   const accessapprovalClient = new AccessApprovalClient();
 
-  async function callGetAccessApprovalSettings() {
+  async function callGetApprovalRequest() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
-    const response = await accessapprovalClient.getAccessApprovalSettings(request);
+    const response = await accessapprovalClient.getApprovalRequest(request);
     console.log(response);
   }
 
-  callGetAccessApprovalSettings();
-  // [END accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async]
+  callGetApprovalRequest();
+  // [END accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async]
 }
 
 process.on('unhandledRejection', err => {

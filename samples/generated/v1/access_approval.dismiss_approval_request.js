@@ -12,22 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main() {
-  // [START accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_async]
+  // [START accessapproval_v1_generated_AccessApproval_DismissApprovalRequest_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Name of the approval request to approve.
+   *  Name of the ApprovalRequest to dismiss.
    */
   // const name = 'abc123'
-  /**
-   *  The expiration time of this approval.
-   */
-  // const expireTime = {}
 
   // Imports the Accessapproval library
   const {AccessApprovalClient} = require('@google-cloud/access-approval').v1;
@@ -35,18 +30,17 @@ function main() {
   // Instantiates a client
   const accessapprovalClient = new AccessApprovalClient();
 
-  async function callApproveApprovalRequest() {
+  async function callDismissApprovalRequest() {
     // Construct request
-    const request = {
-    };
+    const request = {};
 
     // Run request
-    const response = await accessapprovalClient.approveApprovalRequest(request);
+    const response = await accessapprovalClient.dismissApprovalRequest(request);
     console.log(response);
   }
 
-  callApproveApprovalRequest();
-  // [END accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_async]
+  callDismissApprovalRequest();
+  // [END accessapproval_v1_generated_AccessApproval_DismissApprovalRequest_async]
 }
 
 process.on('unhandledRejection', err => {
