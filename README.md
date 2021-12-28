@@ -4,7 +4,7 @@
 
 # [Access Approval: Node.js Client](https://github.com/googleapis/nodejs-access-approval)
 
-[![release level](https://img.shields.io/badge/release%20level-general%20availability%20%28GA%29-brightgreen.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
+
 [![npm version](https://img.shields.io/npm/v/@google-cloud/access-approval.svg)](https://www.npmjs.org/package/@google-cloud/access-approval)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-access-approval/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-access-approval)
 
