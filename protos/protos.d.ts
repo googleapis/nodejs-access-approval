@@ -148,49 +148,49 @@ export namespace google {
                 namespace AccessApproval {
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|listApprovalRequests}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#listApprovalRequests}.
                      * @param error Error, if any
                      * @param [response] ListApprovalRequestsResponse
                      */
                     type ListApprovalRequestsCallback = (error: (Error|null), response?: google.cloud.accessapproval.v1.ListApprovalRequestsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|getApprovalRequest}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#getApprovalRequest}.
                      * @param error Error, if any
                      * @param [response] ApprovalRequest
                      */
                     type GetApprovalRequestCallback = (error: (Error|null), response?: google.cloud.accessapproval.v1.ApprovalRequest) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|approveApprovalRequest}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#approveApprovalRequest}.
                      * @param error Error, if any
                      * @param [response] ApprovalRequest
                      */
                     type ApproveApprovalRequestCallback = (error: (Error|null), response?: google.cloud.accessapproval.v1.ApprovalRequest) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|dismissApprovalRequest}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#dismissApprovalRequest}.
                      * @param error Error, if any
                      * @param [response] ApprovalRequest
                      */
                     type DismissApprovalRequestCallback = (error: (Error|null), response?: google.cloud.accessapproval.v1.ApprovalRequest) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|getAccessApprovalSettings}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#getAccessApprovalSettings}.
                      * @param error Error, if any
                      * @param [response] AccessApprovalSettings
                      */
                     type GetAccessApprovalSettingsCallback = (error: (Error|null), response?: google.cloud.accessapproval.v1.AccessApprovalSettings) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|updateAccessApprovalSettings}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#updateAccessApprovalSettings}.
                      * @param error Error, if any
                      * @param [response] AccessApprovalSettings
                      */
                     type UpdateAccessApprovalSettingsCallback = (error: (Error|null), response?: google.cloud.accessapproval.v1.AccessApprovalSettings) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval|deleteAccessApprovalSettings}.
+                     * Callback as used by {@link google.cloud.accessapproval.v1.AccessApproval#deleteAccessApprovalSettings}.
                      * @param error Error, if any
                      * @param [response] Empty
                      */
@@ -4239,9 +4239,6 @@ export namespace google {
             /** FieldOptions lazy */
             lazy?: (boolean|null);
 
-            /** FieldOptions unverifiedLazy */
-            unverifiedLazy?: (boolean|null);
-
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
 
@@ -4278,9 +4275,6 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
-
-            /** FieldOptions unverifiedLazy. */
-            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
